@@ -1,0 +1,51 @@
+﻿<Window xmlns:Controls="clr-namespace:CustomControlPlayground.Controls;assembly=CustomControlPlayground.GUI"  
+        x:Class="CustomControlPlayground.GUI.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/" 
+        xmlns:view="clr-namespace:CustomControlPlayground.GUI.Views"
+        xmlns:Controls1="clr-namespace:CustomControlPlayground.Controls;assembly=CustomControlPlayground"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Title="{Binding Title}" Height="350" Width="525"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal" 
+        TextOptions.TextRenderingMode="Auto"        
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        >
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <view:HamburgerMenu Grid.Column="0"/>
+        <Controls1:NavigationRail Grid.Column="1" HorizontalAlignment="Center">
+            <Controls1:NavigationRail.TopContent>
+                <ListViewItem>
+                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
+                        <materialDesign:PackIcon Kind="IceCream"  HorizontalAlignment="Stretch" Width="25" Height="25" VerticalAlignment="Stretch"/>
+                        <TextBlock Text="About" FontSize="11" HorizontalAlignment="Center"/>
+                    </StackPanel>
+                </ListViewItem>
+                <Controls1:NavigationRailItem/>
+                <Controls1:NavigationRailItem/>
+            </Controls1:NavigationRail.TopContent>
+            <Controls1:NavigationRail.BottomContent>
+                <Controls1:NavigationRailItem Background="Green"/>
+                <Controls1:NavigationRailItem HorizontalAlignment="Center" Text="Hello" Width="50" Height="50" />
+            </Controls1:NavigationRail.BottomContent>
+        </Controls1:NavigationRail>
+        <StackPanel Grid.Column="3">
+            <materialDesign:Card Padding="32" Margin="16">
+                <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">My First Material Design App</TextBlock>
+            </materialDesign:Card>
+            <Button Content="TestButton" Width="250" Cursor="Hand"/>
+        </StackPanel>
+        <!--<Controls1:CustomControl1 Background="GreenYellow" Width="100" Height="100" Margin="212,178,213,56"/>-->
+    </Grid>
+</Window>

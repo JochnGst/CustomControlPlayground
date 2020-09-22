@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30320.27
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CustomControlPlayground.GUI", "CustomControlPlayground.GUI\CustomControlPlayground.GUI.csproj", "{B5A926E7-BD0C-4B1C-B729-1DEC06E3D2F2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomControlPlayground", "CustomControlPlayground\CustomControlPlayground.csproj", "{4DC390A9-15BC-481F-9221-E2565D1ACB61}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B5A926E7-BD0C-4B1C-B729-1DEC06E3D2F2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B5A926E7-BD0C-4B1C-B729-1DEC06E3D2F2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B5A926E7-BD0C-4B1C-B729-1DEC06E3D2F2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B5A926E7-BD0C-4B1C-B729-1DEC06E3D2F2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4DC390A9-15BC-481F-9221-E2565D1ACB61}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4DC390A9-15BC-481F-9221-E2565D1ACB61}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4DC390A9-15BC-481F-9221-E2565D1ACB61}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4DC390A9-15BC-481F-9221-E2565D1ACB61}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {6A2CDF2D-BAF5-4437-B53C-3C436B8591B3}
+	EndGlobalSection
+EndGlobal

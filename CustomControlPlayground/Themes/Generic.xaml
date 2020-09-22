@@ -1,0 +1,14 @@
+<ResourceDictionary
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <ResourceDictionary.MergedDictionaries>
+        <ResourceDictionary Source="pack://application:,,,/CustomControlPlayground;component/Themes/CustomControl1.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CustomControlPlayground;component/Themes/SideNavigation.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CustomControlPlayground;component/Themes/TestParent.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CustomControlPlayground;component/Themes/HamburgerMenu.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CustomControlPlayground;component/Themes/HamburgerMenuItem.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CustomControlPlayground;component/Themes/NavigationRail.xaml" />
+        <ResourceDictionary Source="pack://application:,,,/CustomControlPlayground;component/Themes/NavigationRailItem.xaml" />
+    </ResourceDictionary.MergedDictionaries>
+</ResourceDictionary>
