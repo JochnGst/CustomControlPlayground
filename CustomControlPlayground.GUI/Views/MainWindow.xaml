@@ -32,8 +32,12 @@
                         <TextBlock Text="About" FontSize="11" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </ListViewItem>
-                <Controls1:NavigationRailItem/>
-                <Controls1:NavigationRailItem/>
+                <Controls1:NavigationRailItem IconKind="Add" Text="Add" Command="{Binding TestCommand}"/>
+                <Controls1:NavigationRailItem IconKind="Car" Text="Car">
+                    <Controls1:NavigationRailItem.InputBindings>
+                        <MouseBinding Gesture="LeftClick" Command="{Binding TestCommand}"/>
+                    </Controls1:NavigationRailItem.InputBindings>
+                </Controls1:NavigationRailItem>
             </Controls1:NavigationRail.TopContent>
             <Controls1:NavigationRail.BottomContent>
                 <Controls1:NavigationRailItem Background="Green"/>
