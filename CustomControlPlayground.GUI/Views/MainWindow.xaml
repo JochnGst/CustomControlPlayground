@@ -25,20 +25,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <view:HamburgerMenu Grid.Column="0"/>
-        <!--<Controls1:NavigationRail Grid.Column="1" HorizontalAlignment="Center">
-            <Controls1:NavigationRail.TopContent>
-                <Controls1:NavigationRailItem IconKind="Add" Text="Add" Command="{Binding TestCommand}"/>
-                <Controls1:NavigationRailItem IconKind="Car" Text="Car" Background="#00000000" Height="70">
-                    <Controls1:NavigationRailItem.InputBindings>
-                        <MouseBinding Gesture="LeftClick" Command="{Binding TestCommand}"/>
-                    </Controls1:NavigationRailItem.InputBindings>
-                </Controls1:NavigationRailItem>
-            </Controls1:NavigationRail.TopContent>
-            <Controls1:NavigationRail.BottomContent>
-                <Controls1:NavigationRailItem Background="Green"/>
-                <Controls1:NavigationRailItem HorizontalAlignment="Center" Text="Hello" Width="50" Height="50" />
-            </Controls1:NavigationRail.BottomContent>
-        </Controls1:NavigationRail>-->
+
         <ListBox Grid.Column="1" HorizontalAlignment="Center">
             <Controls1:NavigationRailItem IconKind="Car" Text="Car" Command="{Binding TestCommand}"/>
             <Separator Height="10"/>
