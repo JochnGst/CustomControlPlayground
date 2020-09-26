@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace CustomControlPlayground.Controls
 {
-    public class NavigationRail : ContentControl
+    public class NavigationRail : ListBox
     {
 
         static NavigationRail()
@@ -17,43 +17,43 @@ namespace CustomControlPlayground.Controls
 
         public override void BeginInit()
         {
-            TopContent = new ObservableCollection<ListViewItem>();
-            BottomContent = new ObservableCollection<ListViewItem>();
+            TopContent = new ObservableCollection<NavigationRailItem>();
+            BottomContent = new ObservableCollection<NavigationRailItem>();
             base.BeginInit();
         }
 
 
 
 
-        public ObservableCollection<ListViewItem> TopContent
+        public ObservableCollection<NavigationRailItem> TopContent
         {
-            get { return (ObservableCollection<ListViewItem>)GetValue(TopContentProperty); }
+            get { return (ObservableCollection<NavigationRailItem>)GetValue(TopContentProperty); }
             set { SetValue(TopContentProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty TopContentProperty =
-            DependencyProperty.Register(nameof(TopContent), typeof(ObservableCollection<ListViewItem>), typeof(NavigationRail),
+            DependencyProperty.Register(nameof(TopContent), typeof(ObservableCollection<NavigationRailItem>), typeof(NavigationRail),
                 new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.AffectsMeasure));
 
-        public ObservableCollection<ListViewItem> BottomContent
+        public ObservableCollection<NavigationRailItem> BottomContent
         {
-            get { return (ObservableCollection<ListViewItem>)GetValue(BottomContentProperty); }
+            get { return (ObservableCollection<NavigationRailItem>)GetValue(BottomContentProperty); }
             set { SetValue(BottomContentProperty, value); }
         }
 
         // Using a DependencyProperty as the backing store for MyProperty.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty BottomContentProperty =
-            DependencyProperty.Register(nameof(BottomContent), typeof(ObservableCollection<ListViewItem>), typeof(NavigationRail),
+            DependencyProperty.Register(nameof(BottomContent), typeof(ObservableCollection<NavigationRailItem>), typeof(NavigationRail),
                 new FrameworkPropertyMetadata(null, FrameworkPropertyMetadataOptions.AffectsRender | FrameworkPropertyMetadataOptions.AffectsMeasure));
 
-        public ListViewItem SelectedItem
+        new public NavigationRailItem SelectedItem
         {
-            get { return (ListViewItem)GetValue(SelectedItemProperty); }
+            get { return (NavigationRailItem)GetValue(SelectedItemProperty); }
             set { SetValue(SelectedItemProperty, value); }
         }
 
-        public static readonly DependencyProperty SelectedItemProperty =
-            DependencyProperty.Register(nameof(SelectedItem), typeof(ListViewItem), typeof(NavigationRail), new PropertyMetadata(null));
+        new public static readonly DependencyProperty SelectedItemProperty =
+            DependencyProperty.Register(nameof(SelectedItem), typeof(NavigationRailItem), typeof(NavigationRail), new PropertyMetadata(null));
     }
 }

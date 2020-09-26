@@ -7,7 +7,8 @@
         xmlns:Controls1="clr-namespace:CustomControlPlayground.Controls;assembly=CustomControlPlayground"
         prism:ViewModelLocator.AutoWireViewModel="True"
         Title="{Binding Title}" Height="350" Width="525"
-        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes" 
+        xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
         TextElement.Foreground="{DynamicResource MaterialDesignBody}"
         TextElement.FontWeight="Regular"
         TextElement.FontSize="13"
@@ -24,16 +25,10 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
         <view:HamburgerMenu Grid.Column="0"/>
-        <Controls1:NavigationRail Grid.Column="1" HorizontalAlignment="Center">
+        <!--<Controls1:NavigationRail Grid.Column="1" HorizontalAlignment="Center">
             <Controls1:NavigationRail.TopContent>
-                <ListViewItem>
-                    <StackPanel Orientation="Vertical" HorizontalAlignment="Center">
-                        <materialDesign:PackIcon Kind="IceCream"  HorizontalAlignment="Stretch" Width="25" Height="25" VerticalAlignment="Stretch"/>
-                        <TextBlock Text="About" FontSize="11" HorizontalAlignment="Center"/>
-                    </StackPanel>
-                </ListViewItem>
                 <Controls1:NavigationRailItem IconKind="Add" Text="Add" Command="{Binding TestCommand}"/>
-                <Controls1:NavigationRailItem IconKind="Car" Text="Car">
+                <Controls1:NavigationRailItem IconKind="Car" Text="Car" Background="#00000000" Height="70">
                     <Controls1:NavigationRailItem.InputBindings>
                         <MouseBinding Gesture="LeftClick" Command="{Binding TestCommand}"/>
                     </Controls1:NavigationRailItem.InputBindings>
@@ -43,12 +38,30 @@
                 <Controls1:NavigationRailItem Background="Green"/>
                 <Controls1:NavigationRailItem HorizontalAlignment="Center" Text="Hello" Width="50" Height="50" />
             </Controls1:NavigationRail.BottomContent>
-        </Controls1:NavigationRail>
+        </Controls1:NavigationRail>-->
+        <ListBox Grid.Column="1" HorizontalAlignment="Center">
+            <Controls1:NavigationRailItem IconKind="Car" Text="Car" Command="{Binding TestCommand}"/>
+            <Separator Height="10"/>
+            <Controls1:NavigationRailItem IconKind="XboxLive" Text="XBox" >
+                <Controls1:NavigationRailItem.InputBindings>
+                    <MouseBinding Gesture="LeftClick" Command="{Binding TestCommand}"/>
+                </Controls1:NavigationRailItem.InputBindings>
+            </Controls1:NavigationRailItem>
+            <ListBoxItem >
+                <StackPanel Orientation="Vertical" >
+                    <StackPanel.InputBindings>
+                        <MouseBinding Gesture="LeftClick" Command="{Binding TestCommand}"/>
+                    </StackPanel.InputBindings>
+                    <materialDesign:PackIcon Kind="Apple"  HorizontalAlignment="Stretch" Width="25" Height="25" VerticalAlignment="Stretch"/>
+                    <TextBlock Text="Listbox" FontSize="11" HorizontalAlignment="Center"/>
+                </StackPanel>
+            </ListBoxItem>
+        </ListBox>
         <StackPanel Grid.Column="3">
             <materialDesign:Card Padding="32" Margin="16">
                 <TextBlock Style="{DynamicResource MaterialDesignHeadline6TextBlock}">My First Material Design App</TextBlock>
             </materialDesign:Card>
-            <Button Content="TestButton" Width="250" Cursor="Hand"/>
+            <Button Content="TestButton" Command="{Binding TestCommand}" Width="250" Cursor="Hand"/>
         </StackPanel>
         <!--<Controls1:CustomControl1 Background="GreenYellow" Width="100" Height="100" Margin="212,178,213,56"/>-->
     </Grid>

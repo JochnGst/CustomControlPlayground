@@ -9,13 +9,12 @@
                         <ScrollViewer DockPanel.Dock="Bottom" VerticalScrollBarVisibility="Auto" >
                             <ItemsControl  ItemsSource="{TemplateBinding BottomContent}"/>
                         </ScrollViewer>
-                        <ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="Auto">
+                        <ItemsControl DockPanel.Dock="Top" ItemsSource="{TemplateBinding TopContent}"/>
+                        <!--<ScrollViewer DockPanel.Dock="Top" VerticalScrollBarVisibility="Auto">
                             <ItemsControl ItemsSource="{TemplateBinding TopContent}"/>
-                        </ScrollViewer>
-                        <!--<ScrollContentPresenter/>-->
+                        </ScrollViewer>-->
                         <Separator DockPanel.Dock="Bottom" Height="5"/>
-                        <!--<ContentPresenter  />-->
-                        <!--<ContentPresenter ContentTemplate="{TemplateBinding ContentTemplate}" Content="{TemplateBinding BottomContent}"/>-->
+                        <ContentPresenter  />
                     </DockPanel>
                 </ControlTemplate>
             </Setter.Value>

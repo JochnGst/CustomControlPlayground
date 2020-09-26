@@ -99,22 +99,8 @@
                                 <TextBlock Text="Gamma" Margin="10 0 0 0" FontSize="20" Width="119"/>
                             </StackPanel>
                         </ListViewItem>
-                        <controls:NavigationRailItem/>
                     </ListView>
                     <Separator DockPanel.Dock="Bottom"/>
-                    <!--<ListView>
-                        <ListViewItem Height="48">
-                            <i:Interaction.Triggers>
-                                <i:EventTrigger EventName="MouseLeftButtonUp">
-                                    <i:InvokeCommandAction Command="{Binding SettingsCommand}"/>
-                                </i:EventTrigger>
-                            </i:Interaction.Triggers>
-                            <StackPanel Orientation="Horizontal">
-                                <materialDesign:PackIcon Kind="Settings" Width="30" Height="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
-                                <TextBlock Text="Settings" Margin="10 0 0 0" FontSize="20" Width="119"/>
-                            </StackPanel>
-                        </ListViewItem>
-                    </ListView>-->
                 </DockPanel>
 
 

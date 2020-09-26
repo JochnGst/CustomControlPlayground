@@ -14,14 +14,12 @@ using System.Windows.Shapes;
 
 namespace CustomControlPlayground.Controls
 {
-    public class NavigationRailItem : ListViewItem
+    public class NavigationRailItem : ListBoxItem
     {
         static NavigationRailItem()
         {
             DefaultStyleKeyProperty.OverrideMetadata(typeof(NavigationRailItem), new FrameworkPropertyMetadata(typeof(NavigationRailItem)));
         }
-
-
 
         public PackIconKind IconKind
         {
@@ -33,8 +31,6 @@ namespace CustomControlPlayground.Controls
         public static readonly DependencyProperty IconKindProperty =
             DependencyProperty.Register(nameof(IconKind), typeof(PackIconKind), typeof(NavigationRailItem), new PropertyMetadata(default(PackIconKind)));
 
-
-
         public string Text
         {
             get { return (string)GetValue(TextProperty); }
@@ -45,8 +41,6 @@ namespace CustomControlPlayground.Controls
         public static readonly DependencyProperty TextProperty =
             DependencyProperty.Register(nameof(Text), typeof(string), typeof(NavigationRailItem), new PropertyMetadata(""));
 
-
-
         public ICommand Command
         {
             get { return (ICommand)GetValue(CommandProperty); }
@@ -55,11 +49,7 @@ namespace CustomControlPlayground.Controls
 
         // Using a DependencyProperty as the backing store for Command.  This enables animation, styling, binding, etc...
         public static readonly DependencyProperty CommandProperty =
-            DependencyProperty.Register(nameof(Command), typeof(ICommand), typeof(NavigationRailItem), 
+            DependencyProperty.Register(nameof(Command), typeof(ICommand), typeof(NavigationRailItem),
                 new PropertyMetadata(default(ICommand)));
-
-
-
-
     }
 }
